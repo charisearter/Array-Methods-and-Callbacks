@@ -150,7 +150,8 @@ for (let i=0; i < winners.length; i++){
     console.log(`In ${years[i]},${winners[i]} won the World Cup.`)
     }
 };
-getWinnersByYears(getWinners(getFinals(data)), getYears(getFinals(data)));
+
+
 /* Task 7: Create a function called `getCountryWins` that takes the parameters `data` and `team initials` and returns the number of world cup wins that country has had. 
 
 Hint: Investigate your data to find "team initials"!
@@ -174,7 +175,7 @@ function getCountryWins(data, teamInitials) { // takes data and team initials as
         return `${teamInitials} has won ${count} games`;
     }
 
-    console.log(getCOuntryWIns(data, "BRA"));
+    //console.log(getCountryWins(data, "BRA"));
 
     // for all team initials taht match data.team initials reduce
     // count ++ for the same team initials for reduce?
@@ -183,7 +184,7 @@ function getCountryWins(data, teamInitials) { // takes data and team initials as
 
     /* code here */
 
-};
+//};
 
 // getCountryWins();
 
@@ -198,7 +199,7 @@ function getGoals(/* code here */) {
 
 };
 
-getGoals();
+//getGoals();
 
 //STRETCH
 /* Task 9: Write a function called badDefense() that accepts a parameter `data` and calculates the team with the most goals scored against them per appearance (average goals against) in the World Cup finals */
@@ -209,7 +210,7 @@ function badDefense(/* code here */) {
 
 };
 
-badDefense();
+//badDefense();
 
 //STRETCH
 /* Task 10: Write a function called `getAverageGoals` that accepts a parameter `data` and returns the the average number of home team goals and away team goals scored per match (Hint: use .reduce and do this in 2 steps) */
@@ -226,6 +227,7 @@ function getAverageGoals(data) {
      return accumulator + currentValue
  }, 0) / homeTeamGoals.length
 };
+
 let avgAwayGoals = awayTeamGoals.reduce((accumulator, currentValue) => { return accumulator + currentValue 
 }, 0) / awayTeamGoals.length
 
